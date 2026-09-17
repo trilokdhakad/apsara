@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-export const counsellingOptions = ["mcc", "mp", "both"] as const
+export const counsellingOptions = ["mcc", "mp", "both", "other"] as const
 
 export const waitlistSchema = z.object({
   email: z.email(),
