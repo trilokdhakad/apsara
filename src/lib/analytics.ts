@@ -1,6 +1,7 @@
 export type AnalyticsEvent =
   | { name: "waitlist_submitted"; properties: { counselling: string } }
   | { name: "case_round_changed"; properties: { round: string } }
+  | { name: "hero_cta_clicked"; properties: { cta: "explore_proof" | "join_waitlist" } }
 
 export function capture(event: AnalyticsEvent) {
   if (typeof window === "undefined") return

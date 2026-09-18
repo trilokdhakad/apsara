@@ -3,12 +3,12 @@ import { cn } from "cn"
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-20 border-b border-border/60 bg-surface-warm/85 backdrop-blur-md">
+    <header className="sticky top-0 z-20 border-b border-border/25 bg-background/75 backdrop-blur-md">
       <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-6">
-        <a href="#top" className="text-sm font-semibold tracking-tight text-foreground">
+        <a href="#top" className="text-[0.88rem] font-semibold tracking-[0.02em] text-foreground">
           Apsara
         </a>
-        <nav className="flex items-center gap-6 text-sm text-muted-foreground">
+        <nav className="flex items-center gap-6 text-[0.82rem] text-muted-foreground">
           <a href="#problem" className="hidden hover:text-foreground sm:inline">
             Problem
           </a>

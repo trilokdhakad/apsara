@@ -38,31 +38,32 @@ export function CaseStudy() {
 
   return (
     <MotionConfig reducedMotion="user">
-    <section id="case" className="bg-surface-neutral border-b border-border/40">
-      <div className="mx-auto w-full max-w-5xl px-6 py-20 sm:py-24">
+    <section id="case" className="bg-surface-neutral border-b border-border/30">
+      <div className="mx-auto w-full max-w-5xl px-6 py-24 sm:py-28">
         <div className="grid gap-10 sm:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] sm:gap-16">
           <div>
-            <div className="flex items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-white px-3 py-1 text-[0.72rem] font-medium tracking-wide">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground/80"></span>
-                Real case · anonymized
-              </span>
-            </div>
-            <h2 className="mt-6 text-3xl font-semibold tracking-tight leading-[1.1] sm:text-4xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-white px-3 py-1 text-[0.68rem] font-medium tracking-wide text-foreground/80">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground/70"></span>
+              Real case · anonymized
+            </span>
+            <h2 className="mt-6 text-3xl font-semibold tracking-tight leading-[1.08] sm:text-4xl">
               {caseStudy.title}
             </h2>
-            <p className="mt-5 text-sm leading-7 text-muted-foreground max-w-md">
-              {caseStudy.kicker}
+            <p className="mt-5 text-lg font-medium tracking-tight leading-[1.3] text-foreground/85 max-w-lg">
+              The strategy changes when the state of the admissions system changes.
             </p>
           </div>
           <div className="sm:pt-2">
             <p className="text-base leading-7 text-muted-foreground text-pretty">
               {caseStudy.disclaimer}
             </p>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground/85 text-pretty">
+              {caseStudy.kicker}
+            </p>
           </div>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03),0_8px_32px_-16px_rgba(0,0,0,0.15)]">
+        <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03),0_8px_32px_-16px_rgba(0,0,0,0.15)]">
           <div className="flex gap-1 overflow-x-auto border-b border-border bg-white/60 p-2">
             {caseStudy.rounds.map((item) => {
               const selected = item.id === roundId

@@ -9,9 +9,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Apsara — The intelligence layer for college admissions",
+  title: "Apsara — The intelligence layer for navigating college admissions",
   description:
-    "Apsara turns fragmented admissions data into personalized strategy. Built around a real, anonymized Indian medical counselling case.",
+    "Apsara is building an intelligent, end-to-end system for navigating college admissions. Real proof with an anonymized Indian medical counselling case study.",
 }
 
 export default function RootLayout({

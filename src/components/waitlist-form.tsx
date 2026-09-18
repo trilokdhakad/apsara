@@ -7,10 +7,10 @@ import { counsellingOptions, waitlistSchema } from "@/lib/waitlist"
 import { cn } from "cn"
 
 const labels: Record<(typeof counsellingOptions)[number], string> = {
-  mcc: "MCC All-India",
-  mp: "Madhya Pradesh",
-  both: "MCC + MP",
-  other: "Other admissions",
+  mcc: "Indian medical / All-India",
+  mp: "Madhya Pradesh state",
+  both: "All-India + Madhya Pradesh",
+  other: "Other admissions context",
 }
 
 export function WaitlistForm() {
@@ -57,23 +57,20 @@ export function WaitlistForm() {
   }
 
   return (
-    <section id="waitlist" className="bg-white border-b border-border/40">
-      <div className="mx-auto w-full max-w-5xl px-6 py-20 sm:py-24">
-        <div className="grid gap-14 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:gap-20">
+    <section id="waitlist" className="bg-white border-b border-border/30">
+      <div className="mx-auto w-full max-w-5xl px-6 py-24 sm:py-28">
+        <div className="grid gap-12 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:gap-20">
           <div>
-            <p className="text-xs font-medium tracking-[0.14em] uppercase text-muted-foreground">
+            <p className="text-[0.68rem] font-medium tracking-[0.18em] uppercase text-muted-foreground">
               Join the waitlist
             </p>
-            <h2 className="mt-6 text-3xl font-semibold tracking-tight leading-[1.1] max-w-md">
-              Want Apsara to work on your admissions problem?
+            <h2 className="mt-6 text-3xl font-semibold tracking-tight leading-[1.08] max-w-md sm:text-4xl">
+              Admissions decisions change.
+              <br />
+              We are building a system that can keep up.
             </h2>
-            <p className="mt-6 text-base leading-7 text-muted-foreground max-w-md text-pretty">
-              This is the proof of concept. The full admissions engine is not yet available for arbitrary students or
-              international systems. We are validating demand before building it further.
-            </p>
-            <p className="mt-4 text-sm leading-6 text-muted-foreground/85 max-w-md">
-              If you — or someone you are advising — is facing a high-stakes admissions decision in the next
-              cycle, leave an email and tell us which system matters. We will follow up when we can analyse it.
+            <p className="mt-6 text-base leading-8 text-muted-foreground max-w-md text-pretty">
+              Join the early access list. This page is a validation prototype — the full intelligence engine is not yet available for all students or international systems. If you face a high-stakes decision in the next cycle, we will follow up when we can analyze your context.
             </p>
           </div>
           <div>
@@ -94,7 +91,7 @@ export function WaitlistForm() {
                 />
               </div>
               <fieldset className="space-y-2">
-                <legend className="text-sm font-medium">Admissions you care about</legend>
+                <legend className="text-sm font-medium">Which admissions context matters to you?</legend>
                 <div className="flex flex-wrap gap-2">
                   {counsellingOptions.map((option) => (
                     <button

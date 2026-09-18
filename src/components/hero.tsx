@@ -1,52 +1,55 @@
+"use client"
+
 import { buttonVariants } from "@/components/ui/button"
+import { capture } from "@/lib/analytics"
 import { cn } from "cn"
 
 export function Hero() {
   return (
-    <section className="bg-surface-warm border-b border-border/40">
-      <div className="mx-auto w-full max-w-5xl px-6 pt-20 pb-20 sm:pt-28 sm:pb-24">
+    <section className="bg-surface-warm border-b border-border/30">
+      <div className="mx-auto w-full max-w-5xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36">
         <div className="flex items-start justify-between">
-          <p className="text-xs font-medium tracking-[0.14em] uppercase text-muted-foreground/90">
+          <p className="text-[0.68rem] font-medium tracking-[0.18em] uppercase text-muted-foreground/80">
             Apsara
           </p>
-          <p className="hidden text-xs text-muted-foreground/70 sm:block">
-            Admissions intelligence, in preview.
+          <p className="hidden text-[0.68rem] text-muted-foreground/60 sm:block">
+            Preview · validation prototype
           </p>
         </div>
 
-        <h1 className="mt-8 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-balance sm:text-6xl sm:leading-[1.02]">
-          The intelligence layer for college admissions.
+        <h1 className="mt-10 max-w-4xl text-4xl font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl sm:leading-[1]">
+          Admissions are not a search problem.
+          <br />
+          <span className="text-foreground/70">
+            They are a continuously changing decision process.
+          </span>
         </h1>
 
-        <div className="mt-8 grid gap-10 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:gap-16">
-          <p className="text-lg leading-8 text-foreground/80 text-pretty max-w-md">
-            Admissions generate enormous amounts of structured data. Students still navigate them with
-            spreadsheets, anecdotes, and static predictors that go stale the moment rounds begin.
-          </p>
-          <p className="text-base leading-7 text-muted-foreground text-pretty max-w-md">
-            Apsara turns historical cutoffs, current seat availability, student constraints, and round-by-round
-            movement into a single, continuously updated strategy. This page is the proof of concept — not the finished platform.
-          </p>
-        </div>
+        <p className="mt-8 max-w-2xl text-base leading-8 text-foreground/75 text-pretty sm:text-lg sm:leading-8">
+          Admissions are built around eligibility, rules, and deadlines — and the situation keeps changing. Apsara is building an intelligent system that navigates the entire process, from understanding what is realistic to updating strategy when conditions shift.
+        </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
-          <a href="#case" className={cn(buttonVariants({ size: "lg", variant: "default" }))}>
-            Inspect the real case
+          <a
+            href="#case"
+            onClick={() => capture({ name: "hero_cta_clicked", properties: { cta: "explore_proof" } })}
+            className={cn(buttonVariants({ size: "lg", variant: "default" }))}
+          >
+            Explore the proof
           </a>
-          <a href="#intelligence" className={cn(buttonVariants({ size: "lg", variant: "outline" }))}>
-            How the system works
+          <a
+            href="#waitlist"
+            onClick={() => capture({ name: "hero_cta_clicked", properties: { cta: "join_waitlist" } })}
+            className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
+          >
+            Join the waitlist
           </a>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-border/40 pt-6 text-xs text-muted-foreground/80">
-          <div className="flex items-center gap-2">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground/60"></span>
-            <span>Primary proof: real anonymized Indian MCC + MP counselling</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-muted-foreground/50"></span>
-            <span>Broader vision: admissions systems across countries</span>
-          </div>
+        <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-2 border-t border-border/30 pt-5 text-[0.68rem] text-muted-foreground/70">
+          <span>Primary proof · real anonymized Indian MCC + MP counselling</span>
+          <span className="h-1 w-1 rounded-full bg-border"></span>
+          <span>Broader architecture · admissions systems across contexts</span>
         </div>
       </div>
     </section>
