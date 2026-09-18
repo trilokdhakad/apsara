@@ -21,12 +21,12 @@ export function Hero() {
           Admissions are not a search problem.
           <br />
           <span className="text-foreground/70">
-            They are a continuously changing decision process.
+            They are a decision process that keeps changing.
           </span>
         </h1>
 
         <p className="mt-8 max-w-2xl text-base leading-8 text-foreground/75 text-pretty sm:text-lg sm:leading-8">
-          Admissions are built around eligibility, rules, and deadlines — and the situation keeps changing. Apsara is building an intelligent system that navigates the entire process, from understanding what is realistic to updating strategy when conditions shift.
+          Admissions are shaped by eligibility, rules, deadlines, and changing options. Apsara is building an intelligent system that navigates the process, from understanding what is realistic to updating strategy as conditions change.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
