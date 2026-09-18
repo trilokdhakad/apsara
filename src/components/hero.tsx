@@ -20,7 +20,7 @@ export function Hero() {
         <h1 className="mt-10 max-w-4xl text-4xl font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl sm:leading-[1]">
           Admissions are not a search problem.
           <br />
-          <span className="text-foreground/70">
+          <span className="block max-w-3xl text-foreground/55 sm:text-5xl">
             They are a decision process that keeps changing.
           </span>
         </h1>
